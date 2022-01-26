@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     lazy var locationManager = CLLocationManager()
     var geofences: [NSManagedObject] = []
+    var geofenceDatabase = GeofenceDatabase()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
 
         do {
             geofences = try managedContext.fetch(fetchRequest)
+            if geofences.isEmpty {
+                for geofence in geofenceDatabase.geofenceStarters {
+                    saveGeofence(id: geofence.id, radius: geofence.radius, latitude: geofence.latitude, longitude: geofence.longitude)
+                }
+            } else {
+                for geofence in geofences {
+                    startMonitoring(geofence: geofence as! Geofence)
+                }
+            }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

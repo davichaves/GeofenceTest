@@ -17,6 +17,7 @@
 		932BAF8527A1E18D009C4BD9 /* GeofenceTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF8427A1E18D009C4BD9 /* GeofenceTestTests.swift */; };
 		932BAF8F27A1E18D009C4BD9 /* GeofenceTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF8E27A1E18D009C4BD9 /* GeofenceTestUITests.swift */; };
 		932BAF9127A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF9027A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift */; };
+		932BAFA027A1F4E9009C4BD9 /* GeofenceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF9F27A1F4E9009C4BD9 /* GeofenceDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		932BAF8A27A1E18D009C4BD9 /* GeofenceTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofenceTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		932BAF8E27A1E18D009C4BD9 /* GeofenceTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTestUITests.swift; sourceTree = "<group>"; };
 		932BAF9027A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		932BAF9F27A1F4E9009C4BD9 /* GeofenceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				932BAF6A27A1E189009C4BD9 /* AppDelegate.swift */,
 				932BAF6C27A1E189009C4BD9 /* SceneDelegate.swift */,
+				932BAF9F27A1F4E9009C4BD9 /* GeofenceDatabase.swift */,
 				932BAF6E27A1E189009C4BD9 /* ViewController.swift */,
 				932BAF7027A1E189009C4BD9 /* Main.storyboard */,
 				932BAF7627A1E18D009C4BD9 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932BAFA027A1F4E9009C4BD9 /* GeofenceDatabase.swift in Sources */,
 				932BAF6F27A1E189009C4BD9 /* ViewController.swift in Sources */,
 				932BAF7527A1E189009C4BD9 /* GeofenceTest.xcdatamodeld in Sources */,
 				932BAF6B27A1E189009C4BD9 /* AppDelegate.swift in Sources */,
