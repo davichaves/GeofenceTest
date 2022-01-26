@@ -18,8 +18,8 @@
 		932BAF8F27A1E18D009C4BD9 /* GeofenceTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF8E27A1E18D009C4BD9 /* GeofenceTestUITests.swift */; };
 		932BAF9127A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF9027A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift */; };
 		932BAFA027A1F4E9009C4BD9 /* GeofenceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BAF9F27A1F4E9009C4BD9 /* GeofenceDatabase.swift */; };
-		932BAFA227A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 932BAFA127A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx */; };
-		932BAFA327A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 932BAFA127A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx */; };
+		932BAFA227A1FB59009C4BD9 /* GeofenceTest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 932BAFA127A1FB59009C4BD9 /* GeofenceTest.gpx */; };
+		932BAFA327A1FB59009C4BD9 /* GeofenceTest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 932BAFA127A1FB59009C4BD9 /* GeofenceTest.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		932BAF8E27A1E18D009C4BD9 /* GeofenceTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTestUITests.swift; sourceTree = "<group>"; };
 		932BAF9027A1E18D009C4BD9 /* GeofenceTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		932BAF9F27A1F4E9009C4BD9 /* GeofenceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceDatabase.swift; sourceTree = "<group>"; };
-		932BAFA127A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimulatedLocationsGeofenceTest.gpx; sourceTree = "<group>"; };
+		932BAFA127A1FB59009C4BD9 /* GeofenceTest.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GeofenceTest.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 				932BAF7827A1E18D009C4BD9 /* LaunchScreen.storyboard */,
 				932BAF7B27A1E18D009C4BD9 /* Info.plist */,
 				932BAF7327A1E189009C4BD9 /* GeofenceTest.xcdatamodeld */,
-				932BAFA127A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx */,
+				932BAFA127A1FB59009C4BD9 /* GeofenceTest.gpx */,
 			);
 			path = GeofenceTest;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 				932BAF7A27A1E18D009C4BD9 /* LaunchScreen.storyboard in Resources */,
 				932BAF7727A1E18D009C4BD9 /* Assets.xcassets in Resources */,
 				932BAF7227A1E189009C4BD9 /* Main.storyboard in Resources */,
-				932BAFA227A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx in Resources */,
+				932BAFA227A1FB59009C4BD9 /* GeofenceTest.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				932BAFA327A1FB59009C4BD9 /* SimulatedLocationsGeofenceTest.gpx in Resources */,
+				932BAFA327A1FB59009C4BD9 /* GeofenceTest.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
