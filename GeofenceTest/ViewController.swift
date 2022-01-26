@@ -7,10 +7,12 @@
 
 import CoreLocation
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     lazy var locationManager = CLLocationManager()
+    var geofences: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,39 @@ class ViewController: UIViewController {
         locationManager.requestAlwaysAuthorization()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Geofence")
+
+        do {
+            geofences = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func saveGeofence(id: String, radius: Double, latitude: Double, longitude: Double) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Geofence", in: managedContext)!
+        let geofence = NSManagedObject(entity: entity, insertInto: managedContext)
+        geofence.setValue(id, forKeyPath: "id")
+        geofence.setValue(radius, forKeyPath: "radius")
+        geofence.setValue(latitude, forKeyPath: "latitude")
+        geofence.setValue(longitude, forKeyPath: "longitude")
+
+        do {
+            try managedContext.save()
+            geofences.append(geofence)
+        } catch let error as NSError {
+            print("Could not save geofence \(error), \(error.userInfo)")
+        }
+    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
