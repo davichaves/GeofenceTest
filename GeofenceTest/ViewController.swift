@@ -53,6 +53,29 @@ class ViewController: UIViewController {
             print("Could not save geofence \(error), \(error.userInfo)")
         }
     }
+    
+    // MARK: monitoring functions
+    func startMonitoring(geofence: Geofence) {
+        if !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            let message = "Geofencing is not supported on this device!"
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let coordinate = CLLocationCoordinate2D(latitude: geofence.latitude, longitude: geofence.longitude)
+        let region = CLCircularRegion(center: coordinate, radius: geofence.radius, identifier: geofence.id ?? "")
+        locationManager.startMonitoring(for: region)
+    }
+
+    func stopMonitoring(geofence: Geofence) {
+        for region in locationManager.monitoredRegions {
+            guard let circularRegion = region as? CLCircularRegion, circularRegion.identifier == geofence.id else { continue }
+            locationManager.stopMonitoring(for: circularRegion)
+        }
+    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
