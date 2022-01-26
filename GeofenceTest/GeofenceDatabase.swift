@@ -21,9 +21,9 @@ class GeofenceDatabase: NSObject {
 
     override init() {
         geofenceStarters = [
-            GeofenceObject(id: "1", radius: 100, latitude: 37.335, longitude: -122.084058),
-            GeofenceObject(id: "2", radius: 100, latitude: 37.422, longitude: -122.011),
-            GeofenceObject(id: "3", radius: 100, latitude: 37.42882, longitude: -122.16991),
+            GeofenceObject(id: "1", radius: 1000, latitude: 37.335, longitude: -122.084058),
+            GeofenceObject(id: "2", radius: 1000, latitude: 37.422, longitude: -122.011),
+            GeofenceObject(id: "3", radius: 1000, latitude: 37.42882, longitude: -122.16991),
         ]
     }
 }
